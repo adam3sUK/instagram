@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   include Clearance::User
 
-  has_many :posts
+  validates :username, presence: true
+  has_many :posts, dependent: :destroy
   has_many :likes
   has_many :comments
 end

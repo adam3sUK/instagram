@@ -1,3 +1,49 @@
 @import "bootstrap";
 @import "sessions";
 @import "users";
+
+header {
+  background-color: #f6f6f6;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: right;
+}
+
+.main-content-wrap {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.sign-in, .sign-up {
+  padding: 60px 40px;
+  border-radius: 8px;
+  min-width: 40vw;
+  background-color: #f6f6f6;
+  h2 {
+    margin-bottom: 20px;
+  }
+  .text-field, .password-field {
+    margin-bottom: 10px;
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+  .submit-field {
+    input {
+      background-color: rgb(23, 81, 240);
+      color: white;
+      border: 0;
+      margin: 20px 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
+  }
+}
+

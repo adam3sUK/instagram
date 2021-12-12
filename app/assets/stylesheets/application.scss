@@ -11,13 +11,28 @@ header {
   text-align: right;
 }
 
+@include media-breakpoint-up(sm) {
+  .text-right-sm {
+    text-align: right;
+  }
+}
+
+.row {
+  width: 100%;
+}
+
 .main-content-wrap {
-  padding-top: 50px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
+}
+
+.profile-header {
+  display: block;
+  width: 100%;
+  padding: 0 50px 50px;
 }
 
 .sign-in, .sign-up {

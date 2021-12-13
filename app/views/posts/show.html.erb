@@ -8,12 +8,12 @@
     <p>By <%= @post_owner.username %></p>
     <hr />
     <h2>Comments</h2>
-  <% @post.comments.reverse.each do |comment| %>
-    <p><%= comment.user.username %>: <%= comment.body %></p>
-  <% end %>
+    <% @post.comments.reverse.each do |comment| %>
+      <p><a href="/users/<%= comment.user.id %>"><%= comment.user.username %></a>: <%= comment.body %></p>
+    <% end %>
 
     <h4>Add a comment:</h4>
-    <%= form_with model: [ @post, @post.comments.build ], local: true do |form| %>
+    <%= form_with model: [ @post, @post.comments.create ], local: true do |form| %>
    
       <p>
         <%= form.label :body %><br>
@@ -22,6 +22,7 @@
       <p>
         <%= form.submit %>
       </p>
+      
     <% end %>
   </div>
 </div>

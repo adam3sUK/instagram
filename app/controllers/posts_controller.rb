@@ -10,12 +10,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @post_owner = User.find_by_id(@post.user.id)
   end
 
 
   private
   
   def post_params
-    params.require(:post).permit(:body)
+    params.require(:post).permit(:body, :image)
   end
 end

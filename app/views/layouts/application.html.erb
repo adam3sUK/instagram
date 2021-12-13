@@ -9,15 +9,24 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
-      <% if signed_in? %>
-        Signed in as: <%= current_user.username %>
-        <%= button_to 'Sign out', sign_out_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign in', sign_in_path %>
-      <% end %>
+      <div class="row">
+        <div class="col-sm-7">
+          <a href="/">
+            <%= image_tag("logo.png", width: 200) %>
+          </a>
+        </div>
+        <div class="col-sm-5 text-right-sm">
+          <% if signed_in? %>
+
+            <span class="margin-right">Signed in as: <a href="/users/<%= current_user.id %>"><%= current_user.username %></a></span>
+            <%= link_to 'Sign out', sign_out_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', sign_in_path %>
+          <% end %>
+        </div>
+
     </header>
 
 

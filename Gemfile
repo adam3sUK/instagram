@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'clearance'
 gem 'bootstrap', '~> 5.1.3'
+gem 'image_processing'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

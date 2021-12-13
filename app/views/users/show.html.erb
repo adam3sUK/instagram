@@ -14,10 +14,15 @@
 </div>
 <div class="posts-wrap row">
   <% @user.posts.each do |post| %>
-    <div class="post col-sm-4">
-      <a href="/users/<%= @user_id %>/posts/">
-        <p><%= post.body %></p>
-      </a>
+    <div class="col-sm-4">
+      <div class="post">
+        <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
+          <%= image_tag  post.image =%>
+          <div>
+            <p><%= post.body %></p>
+          </div>
+        </a>
+      </div>
     </div>
   <% end %>
 </div>

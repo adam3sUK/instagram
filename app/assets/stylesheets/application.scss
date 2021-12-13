@@ -2,13 +2,55 @@
 @import "sessions";
 @import "users";
 
+$theme-colors: (
+  "primary": #E33692
+);
+
 header {
-  background-color: #f6f6f6;
+  background-color: #E5E5E5;
   padding: 10px;
   width: 100%;
   position: fixed;
   top: 0;
-  text-align: right;
+}
+
+.post {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s linear all 0s;
+  img {
+    display: block;
+    width: 100%;
+    height: 265px;
+  }
+  div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 10px;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s linear all 0s;
+    p {
+      margin: 0;
+      line-height: 1;
+    }
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  &:hover {
+    transition: 0.3s linear all 0s;
+    div {
+      bottom: 0;
+      opacity: 1;
+      transition: 0.3s linear all 0s;
+    }
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -52,7 +94,7 @@ header {
   }
   .submit-field {
     input {
-      background-color: rgb(23, 81, 240);
+      background-color: #E33692;
       color: white;
       border: 0;
       margin: 20px 0;

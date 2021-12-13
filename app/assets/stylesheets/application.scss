@@ -124,12 +124,20 @@ header {
 
 .post-details {
   padding-right: 5%;
+  padding-top: 40px;
+  @include media-breakpoint-up(md) {
+    padding-top: 0;
+  }
   textarea {
     margin: 10px 0;
   }
 }
 
 .post-image {
+  padding-top: 30px;
+  @include media-breakpoint-up(md) {
+    padding-top: 0;
+  }
   img {
     display: block;
     max-width: 100%;

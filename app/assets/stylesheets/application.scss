@@ -6,6 +6,23 @@ $theme-colors: (
   "primary": #E33692
 );
 
+.post {
+  margin-bottom: 20px;
+}
+
+.btn.btn-primary {
+  background-color: #E33692;
+  border: 0;
+  color: white;
+  &:hover {
+    background-color: darken(#E33692, 5%);
+  }
+}
+
+a {
+  color: #E33692;
+}
+
 header {
   background-color: #E5E5E5;
   padding: 10px;
@@ -102,6 +119,20 @@ header {
       padding: 10px 14px;
       border-radius: 8px;
     }
+  }
+}
+
+.post-details {
+  padding-right: 5%;
+  textarea {
+    margin: 10px 0;
+  }
+}
+
+.post-image {
+  img {
+    display: block;
+    max-width: 100%;
   }
 }
 
